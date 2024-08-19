@@ -1,0 +1,275 @@
+/* Home.css */
+
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #50e3c2;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+  --card-bg-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Inter', sans-serif;
+}
+
+.custom-header {
+  --background: var(--card-bg-color);
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 20px;
+}
+
+.xp-score {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.xp-score ion-icon {
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-avatar:hover {
+  box-shadow: 0 0 0 3px var(--secondary-color);
+}
+.search-bar-container {
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.search-bar-container h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.custom-searchbar {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-searchbar input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  outline: none;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-searchbar input:focus {
+  background-color: #f0f8ff; /* Light blue background when focused */
+  border-color: #007bff; /* Blue border when focused */
+}
+
+.custom-searchbar button {
+  background-color: #007bff; /* Blue background for the button */
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 0 8px 8px 0;
+  transition: background-color 0.3s;
+}
+
+.custom-searchbar button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.custom-searchbar button:focus {
+  outline: none;
+}
+
+
+
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.category-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.category-header a {
+  font-size: 16px;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.category-header a:hover {
+  color: var(--secondary-color);
+}
+
+.category-grid {
+  padding:  1px;
+}
+
+.category-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--card-bg-color);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  
+  transition: opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, ;
+  
+}
+
+.category-col {
+  animation: fadeInUp 0.5s ease forwards;
+  /* animation-delay: calc(0.5s * var(--index)); */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.category-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.category-card ion-card-header {
+  padding: 16px;
+}
+
+.category-card ion-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 4px;
+}
+
+.category-card ion-card-subtitle {
+  font-size: 14px;
+  color: #666;
+}
+/* Add styles for loading dots */
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: calc(100vh - 56px); Adjust if you have a header/footer */
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #007bff; /* Change this color as needed */
+  border-radius: 50%;
+  margin: 0 4px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Optional: Center the loading dots vertically and horizontally */
+.loading-dots {
+  /* height: calc(100vh - 56px); Adjust if you have a header/footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.category-grid {
+  text-align: center; /* Center align text */
+}
+
+.no-categories, .no-results {
+  margin: 20px;
+  padding: 20px;
+  font-size: 1.5em;
+  color: #888;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.no-categories {
+  font-weight: bold;
+}
+
+.no-results {
+  color: #f44336; /* Red color for 'not found' message */
+  font-weight: bold;
+}

@@ -1,0 +1,112 @@
+.profile-header {
+  --background: #bbbbbb;
+  --color: white;
+}
+
+.profile-avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Ensures the image is round */
+}
+
+
+.change-photo-button {
+  position: absolute;
+  /* bottom: 50px; */
+  right: calc(50% - 75px);
+  --padding-start: 0;
+  --padding-end: 0;
+  height: 30px;
+  width: 30px;
+  --border-radius: 50%;
+  --background: #6200ee;
+  --color: white;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-item ion-icon {
+  font-size: 24px;
+  color: #6200ee;
+}
+
+.stat-item span {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.stat-item small {
+  font-size: 12px;
+  color: #666;
+}
+
+.progress-label {
+  text-align: center;
+  margin-top: 5px;
+  color: #666;
+}
+
+.profile-fields {
+  margin: 30px 0;
+}
+
+.profile-fields ion-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  margin-bottom: 15px;
+}
+
+.edit-profile-button, .achievements-button {
+  margin: 20px auto;
+  --border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 80%;
+  max-width: 300px;
+}
+
+.edit-profile-button {
+  --background: #6200ee;
+  --color: white;
+}
+
+.achievements-button {
+  --background: #03dac6;
+  --color: #000;
+}
+
+.logout-button {
+  --background: #ffffff;
+  --color: #333;
+}
+
+ion-footer ion-toolbar {
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}

@@ -1,0 +1,117 @@
+/* App.css */
+
+  /* App.css */
+/* ... (previous styles remain the same) ... */
+
+.skip-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .skip-button ion-button {
+    --color: #3880ff;
+    font-weight: bold;
+  }
+  
+  /* ... (rest of the previous styles) ... */
+
+.slider-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .slide-content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    /* animation: bounce 1s ease infinite; */
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s ease 0.3s both;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #666;
+    animation: fadeIn 0.5s ease 0.6s both;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .navigation {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dots {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #3880ff;
+  }
+  
+  .next-button, .get-started-button {
+    --background: #3880ff;
+    --background-activated: #3171e0;
+    --color: #ffffff;
+    --border-radius: 20px;
+    --padding-start: 30px;
+    --padding-end: 30px;
+  }
+

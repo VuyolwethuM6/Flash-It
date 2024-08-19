@@ -1,0 +1,17 @@
+/* src/pages/Quiz.css */
+.quiz-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .quiz-result {
+    text-align: center;
+  }
+  
+  .quiz-score {
+    font-size: 1.5em;
+    color: #4caf50;
+    margin-bottom: 20px;
+  }
+  

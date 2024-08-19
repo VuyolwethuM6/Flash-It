@@ -1,0 +1,7 @@
+{
+  "name": "flashcard-quiz-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
